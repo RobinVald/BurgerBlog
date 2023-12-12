@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Nette\Utils\Random;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Article>
@@ -30,6 +31,7 @@ class ArticleFactory extends Factory
         return [
             'title' => fake()->sentence,
             'body' => fake()->paragraphs(3, true),
+            'price' => fake()->sentence,
             'created_at' => $created,
             'updated_at' => $updated,
             'deleted_at' => $deleted,

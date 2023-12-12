@@ -1,3 +1,17 @@
+<style>
+    .navbar{
+        font-weight: 600;
+
+        background-image: 
+        url("https://cdn.discordapp.com/attachments/915343471957655563/1183758654692937770/header.png?ex=65898028&is=65770b28&hm=41adabc17baf0edb8d06135734e04dfd1073df85158c72865e54d61c2e36ad2f&");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 10%;
+    }
+
+</style>
+
 <div class="navbar bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
@@ -8,7 +22,7 @@
                 @include('partials.links')
             </ul>
         </div>
-        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/whataburger-logo-png-transparent.png" style="width: 10%;">
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -17,8 +31,8 @@
     </div>
     <div class="navbar-end">
         @guest
+            <a href="{{route('login')}}" class="btn btn-secondary">Admin Login</a>
             <a href="{{route('register')}}" class="btn btn-primary mr-3">Register</a>
-            <a href="{{route('login')}}" class="btn btn-secondary">Login</a>
         @else
             <ul class="menu menu-horizontal px-1">
                 <li>

@@ -8,10 +8,10 @@
                     @csrf
                     <div class="form-control w-full">
                         <label class="label">
-                            <span class="label-text">Title</span>
+                            <span class="label-text">Burger Name</span>
 
                         </label>
-                        <input name="title" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror"/>
+                        <input name="title" type="text" placeholder="Burger Name" class="input input-bordered w-full @error('title') input-error @enderror"/>
                         @error('title')
                             <label class="label">
                                 <span class="label-text-alt text-error">{{$message}}</span>
@@ -21,9 +21,9 @@
                     </div>
                     <div class="form-control w-full">
                         <label class="label">
-                            <span class="label-text">Content</span>
+                            <span class="label-text">Discription</span>
                         </label>
-                        <textarea name="body" class="textarea textarea-bordered @error('title') textarea-error @enderror" placeholder="Content here"></textarea>
+                        <textarea name="body" class="textarea textarea-bordered @error('title') textarea-error @enderror" placeholder="Discription"></textarea>
                         @error('body')
                             <label class="label">
                                 <span class="label-text-alt text-error">{{$message}}</span>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-control w-full max-w-xs">
                         <label class="label">
-                            <span class="label-text">Tags</span>
+                            <span class="label-text">Spicyness</span>
                         </label>
                         <select multiple class="select select-bordered" name="tags[]">
                             @foreach($tags as $tag)
@@ -45,6 +45,44 @@
                             </label>
                         @enderror
                     </div>
+                    <div class="form-control w-full">
+                        <label class="label">
+                            <span class="label-text">Vegan</span>
+                        </label>
+                            <input type="hidden" name="vegan" value="0">
+                            <input type="checkbox" name="vegan" id="vegan" value="1" class="checkbox" />
+                    </div>
+
+                    <div class="form-control w-full">
+                        <label class="label">
+                            <span class="label-text">Vegetarian</span>
+                        </label>
+
+                            <input type="hidden" name="vegetarian" value="0">
+                            <input type="checkbox" name="vegetarian" id="vegetarian" value="1" class="checkbox" />
+                    </div>
+
+                    <div class="form-control w-full">
+                        <label class="label">
+                            <span class="label-text">Gluten Free</span>
+                        </label>
+                            <input type="hidden" name="gluten" value="0">
+                            <input type="checkbox" name="gluten" id="gluten" value="1" class="checkbox" />
+                    </div>
+
+                    <div class="form-control w-full">
+                        <label class="label">
+                            <span class="label-text">Price</span>
+
+                        </label>
+                        <input name="price" type="text" placeholder="Article Price" class="input input-bordered w-full @error('price') input-error @enderror"/>
+                        @error('price')
+                            <label class="label">
+                                <span class="label-text-alt text-error">{{$message}}</span>
+                            </label>
+                        @enderror
+                    </div>
+
                     <div class="form-control w-full">
                         <label class="label">
                             <span class="label-text">Images</span>
