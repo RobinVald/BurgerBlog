@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.burgerposts{
+    padding-top: 20px;
+}
+
+.onepost{
+    background-color:white;
+    color: black;
+}
+
+.burgernames{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.hero{
+    background-image: 
+    url("https://cdn.discordapp.com/attachments/915343471957655563/1183758654692937770/header.png?ex=65898028&is=65770b28&hm=41adabc17baf0edb8d06135734e04dfd1073df85158c72865e54d61c2e36ad2f&");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}   
+
+.storebody{
+    background-color: whitesmoke;
+}
+
+.fullbody{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.btn-primary{
+    background-color:#ffa500; border:0
+}
+.btn-primary:hover{
+    background-color:#a26900;
+    color: white;
+    transition: 0.3s;
+}
+
+.addbtn{
+     margin-top: 2%;
+}
+
+.onsale{
+    margin-top: 2%;
+}
+
+.bodytitle{
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    display:flex;
+    justify-content:center;
+}

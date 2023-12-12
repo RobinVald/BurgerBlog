@@ -1,12 +1,12 @@
 @extends('partials.layout')
 
 @section('content')
-    <div class="container mx-auto">
+    <div class="container mx-auto addbtn">
         <a class="btn btn-primary" href="{{route('articles.create')}}">Add Burger</a>
-        <a class="btn btn-secondary" href="{{route('articles.deleted')}}">Deleted Burgers</a>
+        <a class="btn btn-error" href="{{route('articles.deleted')}}">Deleted Burgers</a>
 
         {{$articles->links()}}
-        <table class="table">
+        <table class="table onsale">
             <thead>
                 <th>Id</th>
                 <th>Title</th>
@@ -23,7 +23,6 @@
                         <td>{{$article->updated_at}}</td>
                         <td>
                             <div class="join">
-                                <a class="btn btn-info join-item">View</a>
                                 <a href="{{route('articles.edit', ['article' => $article])}}" class="btn btn-warning join-item">Edit</a>
                                 <input type="submit" class="btn btn-error join-item" value="Delete" form="delete-{{$article->id}}">
                             </div>

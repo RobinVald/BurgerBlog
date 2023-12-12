@@ -1,5 +1,4 @@
 @extends('partials.layout')
-
 @section('content')
     <div class="container mx-auto w-1/2">
         <div class="card bg-base-100 shadow-xl">
@@ -75,7 +74,7 @@
                             <span class="label-text">Price</span>
 
                         </label>
-                        <input name="price" type="text" placeholder="Article Price" class="input input-bordered w-full @error('price') input-error @enderror"/>
+                        <input name="price" type="text" placeholder="Burger Price" class="input input-bordered w-full @error('price') input-error @enderror"/>
                         @error('price')
                             <label class="label">
                                 <span class="label-text-alt text-error">{{$message}}</span>

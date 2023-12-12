@@ -18,7 +18,5 @@ class UserSeeder extends Seeder
             'name' => env('DEFAULT_USER_NAME', 'User McUserface'),
             'password' => bcrypt(env('DEFAULT_USER_PASSWORD', 'password'))
         ]);
-
-        User::factory(10)->create();
     }
 }
